@@ -1,0 +1,45 @@
+div {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.page h1 {
+    font-size: 5.6rem;
+}
+
+.page h1 p + p {
+    color: rgb(52, 165, 128);
+}
+
+.page {
+    height: 100vh;
+    display: grid;
+}
+
+@media screen and (min-width: 1024px){
+    .page {
+        display: grid;
+        gap: 10rem 0;
+
+        grid-template-areas: 
+        ". . . ."
+        "title login login"
+        "title login login"
+        "title login login"
+        ". . . . "
+        "footer footer footer"
+        ;
+    }
+}
+
+main {
+    grid-area: title;
+}
+
+aside {
+    grid-area: login;
+}
+
+footer {
+    grid-area: footer;
+}
