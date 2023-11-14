@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .content {
@@ -17,11 +17,11 @@ body {
     ". hero . form"
     ". . . ."
     ;
-    gap: 85px;
+    gap: 75px;
 }
 
 main {
-    grid-area: hero;
+    grid-area: form;
 }
 
 aside {
@@ -30,7 +30,9 @@ aside {
 
 aside h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 64px;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 54px;
     font-weight: 500;
     line-height: 75px;
 }
@@ -40,16 +42,18 @@ aside h1 span, main h2 span {
 }
 
 main {
-    width: 600px;
-    height: 520px;
+    width: 500px;
+    height: 500px;
     border: 1px solid black;
-    padding: 44px 57px;
+    padding: 64px 57px;
+    position: relative;
 }
 
 main h2 {
     max-width: 430px;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 500;
+    padding: 10px;
 }
 
 main .actions {
@@ -76,14 +80,80 @@ main .actions a + a {
 }
 
 main footer p {
-    font-size: 16px;
-    margin-top: 80px;
+    font-size: 14px;
+    margin-top: 65px;
 }
 
 main footer a {
     margin-top: 10px;
     font-size: 18px;
     display: block;
-    text-align: center;
+    text-align: left;
     color: black;
+}
+
+main header {
+    display: flex;
+    align-items: center;
+}
+
+main header i {
+    font-size: 20px;
+    color: #ff5678;
+}
+
+main form {
+    margin-top: 10px;
+}
+
+main form label {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+main form :is(input, select) {
+    width: 389px;
+    height: 45px;
+
+    background: #ffffff;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+main form select {
+    appearance: none;
+}
+
+main form .select-div {
+    position: relative;
+}
+
+main form .select-div::after {
+    top: 12px;
+    right: 10px;
+    font-size: 22px;
+    content: '\f107';
+    font-family: 'Font Awesome 6 free';
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+    color: #35e6e9;
+}
+
+main .points {
+    position: relative;
+}
+
+main form input + button {
+    position: absolute;
+    right: -25px;
+    top: 36px;
+    border-color: transparent;
+    color: #35e6e9;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
